@@ -1,0 +1,897 @@
+<!-- Consultas nas tabelas -->
+
+<var preferencias="GetRowsByTemplate('preferenciasGerais', new [] { new Param('email', SubscriberEmail) })"/>
+<var cozinha="GetRowsByTemplate('recomendaçãoCozinha', new [] { new Param('email', SubscriberEmail) })"/>
+<var jantar="GetRowsByTemplate('recomendaçõesJantar', new [] { new Param('email', SubscriberEmail) })"/>
+<var quarto="GetRowsByTemplate('recomendaçõesQuarto', new [] { new Param('email', SubscriberEmail) })"/>
+<var estar="GetRowsByTemplate('recomendaçõesEstar', new [] { new Param('email', SubscriberEmail) })"/>
+<var escritorio="GetRowsByTemplate('recomendaçõesEscritorio', new [] { new Param('email', SubscriberEmail) })"/>
+
+<!--
+
+Combinações possíveis:
+
+/*
+00000
+00001
+00010
+00011
+00100
+00101
+00110
+00111
+01000
+01001
+01010
+01011
+01100
+01101
+01110
+01111
+10000
+10001
+10010
+10011
+10100
+10101
+10110
+10111
+11000
+11001
+11010
+11011
+11100
+11101
+11110
+11111
+*/
+
+-->
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+<!-- TIPO 1 ------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+<!-- modelos de personalização condicional tipo 1 -->
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 00000</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 00001</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 00010</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 00011</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 00100</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 00101</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 00110</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 00111</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 01000</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 01001</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 01010</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 01011</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 01100</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 01101</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 01110</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 0">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 01111</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 10000</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 10001</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 10010</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 10011</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 10100</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 10101</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 10110</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 10111</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 11000</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 11001</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 11010</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 0">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 11011</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 11100</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 0">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 11101</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 0">
+               <p>Content for 11110</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<if condition="cozinha.Count == 1">
+   <if condition="jantar.Count == 1">
+      <if condition="quarto.Count == 1">
+         <if condition="estar.Count == 1">
+            <if condition="escritorio.Count == 1">
+               <p>Content for 11111</p>
+            </if>
+         </if>
+      </if>
+   </if>
+</if>
+
+<!-- modelo de personalização condicional tipo 1 para interesse apenas em cozinha -->
+
+<if condition="cozinha.Count > 1">
+   <if condition="jantar.Count == 0">
+      <if condition="quarto.Count == 0">
+         <if condition="quarto.Count == 0">
+            <if condition="estar.Count == 0">
+               <if condition="escritorio.Count == 0">
+                  <h1>Cozinha</h1>
+                    <h3>Produto 1</h3>
+                    <p>${cozinha[0]['ProductName']}</p>
+                    <p>${cozinha[0]['ImageUrlBig']}</p>
+                    <p>${cozinha[0]['DetailUrl']}</p>
+                    <p>${cozinha[0]['ListPrice']}</p>
+                    <p>${cozinha[0]['Price']}</p>
+                    <h3>Produto 2</h3>
+                    <p>${cozinha[1]['ProductName']}</p>
+                    <p>${cozinha[1]['ImageUrlBig']}</p>
+                    <p>${cozinha[1]['DetailUrl']}</p>
+                    <p>${cozinha[1]['ListPrice']}</p>
+                    <p>${cozinha[1]['Price']}</p>
+                    <h3>Produto 3</h3>
+                    <p>${cozinha[2]['ProductName']}</p>
+                    <p>${cozinha[2]['ImageUrlBig']}</p>
+                    <p>${cozinha[2]['DetailUrl']}</p>
+                    <p>${cozinha[2]['ListPrice']}</p>
+                    <p>${cozinha[2]['Price']}</p>
+                    <h3>Produto 4</h3>
+                    <p>${cozinha[3]['ProductName']}</p>
+                    <p>${cozinha[3]['ImageUrlBig']}</p>
+                    <p>${cozinha[3]['DetailUrl']}</p>
+                    <p>${cozinha[3]['ListPrice']}</p>
+                    <p>${cozinha[3]['Price']}</p>
+                    <h3>Produto 5</h3>
+                    <p>${cozinha[4]['ProductName']}</p>
+                    <p>${cozinha[4]['ImageUrlBig']}</p>
+                    <p>${cozinha[4]['DetailUrl']}</p>
+                    <p>${cozinha[4]['ListPrice']}</p>
+                    <p>${cozinha[4]['Price']}</p>
+                    <h3>Produto 6</h3>
+                    <p>${cozinha[5]['ProductName']}</p>
+                    <p>${cozinha[5]['ImageUrlBig']}</p>
+                    <p>${cozinha[5]['DetailUrl']}</p>
+                    <p>${cozinha[5]['ListPrice']}</p>
+                    <p>${cozinha[5]['Price']}</p>
+                    <h3>Produto 7</h3>
+                    <p>${cozinha[6]['ProductName']}</p>
+                    <p>${cozinha[6]['ImageUrlBig']}</p>
+                    <p>${cozinha[6]['DetailUrl']}</p>
+                    <p>${cozinha[6]['ListPrice']}</p>
+                    <p>${cozinha[6]['Price']}</p>
+                    <h3>Produto 8</h3>
+                    <p>${cozinha[7]['ProductName']}</p>
+                    <p>${cozinha[7]['ImageUrlBig']}</p>
+                    <p>${cozinha[7]['DetailUrl']}</p>
+                    <p>${cozinha[7]['ListPrice']}</p>
+                    <p>${cozinha[7]['Price']}</p>
+                    <h3>Produto 9</h3>
+                    <p>${cozinha[8]['ProductName']}</p>
+                    <p>${cozinha[8]['ImageUrlBig']}</p>
+                    <p>${cozinha[8]['DetailUrl']}</p>
+                    <p>${cozinha[8]['ListPrice']}</p>
+                    <p>${cozinha[8]['Price']}</p>
+               </if>
+            </if>   
+         </if>
+      </if>   
+   </if>  
+</if>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+<!-- TIPO 2 ------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+<!-- modelos de personalização condicional tipo 2 -->
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 00000
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 00001
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 00010
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 00011
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 00100
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 00101
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 00110
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 00111
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 01000
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 01001
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 01010
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 01011
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 01100
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 01101
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 01110
+</if>
+
+<if condition="cozinha.Count == 0 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 01111
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 10000
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 10001
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 10010
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 10011
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 10100
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 10101
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 10110
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 0 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 10111
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 11000
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 11001
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 11010
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 0 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 11011
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 0">
+   Content for 11100
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 0 && escritorio.Count == 1">
+   Content for 11101
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 0">
+   Content for 11110
+</if>
+
+<if condition="cozinha.Count == 1 && jantar.Count == 1 && quarto.Count == 1 && estar.Count == 1 && escritorio.Count == 1">
+   Content for 11111
+</if>
+
+<!-- modelo de personalização condicional tipo 2 para interesse apenas em cozinha -->
+
+<if condition="cozinha.Count > 1 && jantar.Count == 0 && quarto.Count == 0 && estar.Count == 0 && escritorio.Count == 0">
+   <h1>Cozinha</h1>
+	<h3>Produto 1</h3>
+	<p>${cozinha[0]['ProductName']}</p>
+	<p>${cozinha[0]['ImageUrlBig']}</p>
+	<p>${cozinha[0]['DetailUrl']}</p>
+	<p>${cozinha[0]['ListPrice']}</p>
+	<p>${cozinha[0]['Price']}</p>
+	<h3>Produto 2</h3>
+	<p>${cozinha[1]['ProductName']}</p>
+	<p>${cozinha[1]['ImageUrlBig']}</p>
+	<p>${cozinha[1]['DetailUrl']}</p>
+	<p>${cozinha[1]['ListPrice']}</p>
+	<p>${cozinha[1]['Price']}</p>
+	<h3>Produto 3</h3>
+	<p>${cozinha[2]['ProductName']}</p>
+	<p>${cozinha[2]['ImageUrlBig']}</p>
+	<p>${cozinha[2]['DetailUrl']}</p>
+	<p>${cozinha[2]['ListPrice']}</p>
+	<p>${cozinha[2]['Price']}</p>
+	<h3>Produto 4</h3>
+	<p>${cozinha[3]['ProductName']}</p>
+	<p>${cozinha[3]['ImageUrlBig']}</p>
+	<p>${cozinha[3]['DetailUrl']}</p>
+	<p>${cozinha[3]['ListPrice']}</p>
+	<p>${cozinha[3]['Price']}</p>
+	<h3>Produto 5</h3>
+	<p>${cozinha[4]['ProductName']}</p>
+	<p>${cozinha[4]['ImageUrlBig']}</p>
+	<p>${cozinha[4]['DetailUrl']}</p>
+	<p>${cozinha[4]['ListPrice']}</p>
+	<p>${cozinha[4]['Price']}</p>
+	<h3>Produto 6</h3>
+	<p>${cozinha[5]['ProductName']}</p>
+	<p>${cozinha[5]['ImageUrlBig']}</p>
+	<p>${cozinha[5]['DetailUrl']}</p>
+	<p>${cozinha[5]['ListPrice']}</p>
+	<p>${cozinha[5]['Price']}</p>
+	<h3>Produto 7</h3>
+	<p>${cozinha[6]['ProductName']}</p>
+	<p>${cozinha[6]['ImageUrlBig']}</p>
+	<p>${cozinha[6]['DetailUrl']}</p>
+	<p>${cozinha[6]['ListPrice']}</p>
+	<p>${cozinha[6]['Price']}</p>
+	<h3>Produto 8</h3>
+	<p>${cozinha[7]['ProductName']}</p>
+	<p>${cozinha[7]['ImageUrlBig']}</p>
+	<p>${cozinha[7]['DetailUrl']}</p>
+	<p>${cozinha[7]['ListPrice']}</p>
+	<p>${cozinha[7]['Price']}</p>
+	<h3>Produto 9</h3>
+	<p>${cozinha[8]['ProductName']}</p>
+	<p>${cozinha[8]['ImageUrlBig']}</p>
+	<p>${cozinha[8]['DetailUrl']}</p>
+	<p>${cozinha[8]['ListPrice']}</p>
+	<p>${cozinha[8]['Price']}</p>
+</if>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+<!-- TIPO 3 ------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+<!-- modelos de personalização condicional tipo 3 -->
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00000</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00001</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00010</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00011</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00100</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00101</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00110</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 00111</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01000</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01001</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01010</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01011</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01100</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01101</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01110</p>
+</if>
+
+<if condition="0 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 01111</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10000</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10001</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10010</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10011</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10100</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10101</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10110</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 10111</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11000</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11001</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11010</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11011</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11100</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11101</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11110</p>
+</if>
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 1 == (int) preferencias[0]['Jantar'] && 1 == (int) preferencias[0]['Quarto'] && 1 == (int) preferencias[0]['Estar'] && 1 == (int) preferencias[0]['Escritorio']">
+     <p>Content for 11111</p>
+</if>
+
+<!-- modelos de personalização condicional tipo 3 pra interesse apenas em cozinha -->
+
+<if condition="1 == (int) preferencias[0]['Cozinha'] && 0 == (int) preferencias[0]['Jantar'] && 0 == (int) preferencias[0]['Quarto'] && 0 == (int) preferencias[0]['Estar'] && 0 == (int) preferencias[0]['Escritorio']">
+    <h1>Cozinha</h1>
+	<h3>Produto 1</h3>
+	<p>${cozinha[0]['ProductName']}</p>
+	<p>${cozinha[0]['ImageUrlBig']}</p>
+	<p>${cozinha[0]['DetailUrl']}</p>
+	<p>${cozinha[0]['ListPrice']}</p>
+	<p>${cozinha[0]['Price']}</p>
+	<h3>Produto 2</h3>
+	<p>${cozinha[1]['ProductName']}</p>
+	<p>${cozinha[1]['ImageUrlBig']}</p>
+	<p>${cozinha[1]['DetailUrl']}</p>
+	<p>${cozinha[1]['ListPrice']}</p>
+	<p>${cozinha[1]['Price']}</p>
+	<h3>Produto 3</h3>
+	<p>${cozinha[2]['ProductName']}</p>
+	<p>${cozinha[2]['ImageUrlBig']}</p>
+	<p>${cozinha[2]['DetailUrl']}</p>
+	<p>${cozinha[2]['ListPrice']}</p>
+	<p>${cozinha[2]['Price']}</p>
+	<h3>Produto 4</h3>
+	<p>${cozinha[3]['ProductName']}</p>
+	<p>${cozinha[3]['ImageUrlBig']}</p>
+	<p>${cozinha[3]['DetailUrl']}</p>
+	<p>${cozinha[3]['ListPrice']}</p>
+	<p>${cozinha[3]['Price']}</p>
+	<h3>Produto 5</h3>
+	<p>${cozinha[4]['ProductName']}</p>
+	<p>${cozinha[4]['ImageUrlBig']}</p>
+	<p>${cozinha[4]['DetailUrl']}</p>
+	<p>${cozinha[4]['ListPrice']}</p>
+	<p>${cozinha[4]['Price']}</p>
+	<h3>Produto 6</h3>
+	<p>${cozinha[5]['ProductName']}</p>
+	<p>${cozinha[5]['ImageUrlBig']}</p>
+	<p>${cozinha[5]['DetailUrl']}</p>
+	<p>${cozinha[5]['ListPrice']}</p>
+	<p>${cozinha[5]['Price']}</p>
+	<h3>Produto 7</h3>
+	<p>${cozinha[6]['ProductName']}</p>
+	<p>${cozinha[6]['ImageUrlBig']}</p>
+	<p>${cozinha[6]['DetailUrl']}</p>
+	<p>${cozinha[6]['ListPrice']}</p>
+	<p>${cozinha[6]['Price']}</p>
+	<h3>Produto 8</h3>
+	<p>${cozinha[7]['ProductName']}</p>
+	<p>${cozinha[7]['ImageUrlBig']}</p>
+	<p>${cozinha[7]['DetailUrl']}</p>
+	<p>${cozinha[7]['ListPrice']}</p>
+	<p>${cozinha[7]['Price']}</p>
+	<h3>Produto 9</h3>
+	<p>${cozinha[8]['ProductName']}</p>
+	<p>${cozinha[8]['ImageUrlBig']}</p>
+	<p>${cozinha[8]['DetailUrl']}</p>
+	<p>${cozinha[8]['ListPrice']}</p>
+	<p>${cozinha[8]['Price']}</p>
+</if>

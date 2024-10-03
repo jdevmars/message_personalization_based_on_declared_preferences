@@ -1,0 +1,110 @@
+<var cozinha="GetRowsByTemplate('recomendaçãoCozinha', new [] { new Param('email', SubscriberEmail) })"/>
+
+<if condition="cozinha.Count > 0">
+  <h1>Cozinha</h1>
+</if>
+
+<if condition="cozinha.Count > 0">
+  <h3>Produto 1</h3>
+  <p>${cozinha[0]['ProductName']}</p>
+  <p>${cozinha[0]['ImageUrlBig']}</p>
+  <p>${cozinha[0]['DetailUrl']}</p>
+  <p>${cozinha[0]['ListPrice']}</p>
+  <p>${cozinha[0]['Price']}</p>
+</if>
+
+<var jantar="GetRowsByTemplate('recomendaçõesJantar', new [] { new Param('email', SubscriberEmail) })"/>
+
+<if condition="jantar.Count > 0">
+  <h1>Jantar</h1>
+</if>
+
+<if condition="jantar.Count > 0">
+  <h3>Produto 1</h3>
+  <p>${jantar[0]['ProductName']}</p>
+  <p>${jantar[0]['ImageUrlBig']}</p>
+  <p>${jantar[0]['DetailUrl']}</p>
+  <p>${jantar[0]['ListPrice']}</p>
+  <p>${jantar[0]['Price']}</p>
+</if>
+
+<if condition="jantar.Count > 1">
+  <h3>Produto 2</h3>
+  <p>${jantar[1]['ProductName']}</p>
+  <p>${jantar[1]['ImageUrlBig']}</p>
+  <p>${jantar[1]['DetailUrl']}</p>
+  <p>${jantar[1]['ListPrice']}</p>
+  <p>${jantar[1]['Price']}</p>
+</if>
+
+<var quarto="GetRowsByTemplate('recomendaçõesQuarto', new [] { new Param('email', SubscriberEmail) })"/>
+
+<if condition="quarto.Count > 0">
+  <h1>Quarto</h1>
+</if>
+
+<if condition="quarto.Count > 0">
+  <h3>Produto 1</h3>
+  <p>${quarto[0]['ProductName']}</p>
+  <p>${quarto[0]['ImageUrlBig']}</p>
+  <p>${quarto[0]['DetailUrl']}</p>
+  <p>${quarto[0]['ListPrice']}</p>
+  <p>${quarto[0]['Price']}</p>
+</if>
+
+<if condition="quarto.Count > 1">
+  <h3>Produto 2</h3>
+  <p>${quarto[1]['ProductName']}</p>
+  <p>${quarto[1]['ImageUrlBig']}</p>
+  <p>${quarto[1]['DetailUrl']}</p>
+  <p>${quarto[1]['ListPrice']}</p>
+  <p>${quarto[1]['Price']}</p>
+</if>
+
+<var estar="GetRowsByTemplate('recomendaçõesEstar', new [] { new Param('email', SubscriberEmail) })"/>
+
+<if condition="estar.Count > 0">
+  <h1>Estar</h1>
+</if>
+
+<if condition="estar.Count > 0">
+  <h3>Produto 1</h3>
+  <p>${estar[0]['ProductName']}</p>
+  <p>${estar[0]['ImageUrlBig']}</p>
+  <p>${estar[0]['DetailUrl']}</p>
+  <p>${estar[0]['ListPrice']}</p>
+  <p>${estar[0]['Price']}</p>
+</if>
+
+<if condition="estar.Count > 1">
+  <h3>Produto 2</h3>
+  <p>${estar[1]['ProductName']}</p>
+  <p>${estar[1]['ImageUrlBig']}</p>
+  <p>${estar[1]['DetailUrl']}</p>
+  <p>${estar[1]['ListPrice']}</p>
+  <p>${estar[1]['Price']}</p>
+</if>
+
+<var escritorio="GetRowsByTemplate('recomendaçõesEscritorio', new [] { new Param('email', SubscriberEmail) })"/>
+
+<if condition="escritorio.Count > 0">
+  <h1>Escritório</h1>
+</if>
+
+<if condition="escritorio.Count > 0">
+  <h3>Produto 1</h3>
+  <p>${escritorio[0]['ProductName']}</p>
+  <p>${escritorio[0]['ImageUrlBig']}</p>
+  <p>${escritorio[0]['DetailUrl']}</p>
+  <p>${escritorio[0]['ListPrice']}</p>
+  <p>${escritorio[0]['Price']}</p>
+</if>
+
+<if condition="escritorio.Count > 1">
+  <h3>Produto 2</h3>
+  <p>${escritorio[1]['ProductName']}</p>
+  <p>${escritorio[1]['ImageUrlBig']}</p>
+  <p>${escritorio[1]['DetailUrl']}</p>
+  <p>${escritorio[1]['ListPrice']}</p>
+  <p>${escritorio[1]['Price']}</p>
+</if>
